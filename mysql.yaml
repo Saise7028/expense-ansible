@@ -7,6 +7,10 @@
     mysql_root_password: ExpenseApp@1
     login_host: mysql.awsd81s.online
   tasks:
+  - name: ansible to install pymsql
+    ansible.builtin.pip:
+      name:
+      - PyMysql
   - name: install mysql server
     ansible.builtin.package:
       name: mysql-server
